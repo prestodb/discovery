@@ -13,17 +13,17 @@
  */
 package io.airlift.discovery.server.testing;
 
+import com.facebook.airlift.bootstrap.Bootstrap;
+import com.facebook.airlift.bootstrap.LifeCycleManager;
+import com.facebook.airlift.discovery.client.DiscoveryModule;
+import com.facebook.airlift.http.server.testing.TestingHttpServer;
+import com.facebook.airlift.http.server.testing.TestingHttpServerModule;
+import com.facebook.airlift.jaxrs.JaxrsModule;
+import com.facebook.airlift.jmx.testing.TestingJmxModule;
+import com.facebook.airlift.json.JsonModule;
+import com.facebook.airlift.node.testing.TestingNodeModule;
 import com.google.inject.Injector;
-import io.airlift.bootstrap.Bootstrap;
-import io.airlift.bootstrap.LifeCycleManager;
-import io.airlift.discovery.client.DiscoveryModule;
 import io.airlift.discovery.server.EmbeddedDiscoveryModule;
-import io.airlift.http.server.testing.TestingHttpServer;
-import io.airlift.http.server.testing.TestingHttpServerModule;
-import io.airlift.jaxrs.JaxrsModule;
-import io.airlift.jmx.testing.TestingJmxModule;
-import io.airlift.json.JsonModule;
-import io.airlift.node.testing.TestingNodeModule;
 import org.weakref.jmx.guice.MBeanModule;
 
 import java.net.URI;

@@ -13,21 +13,21 @@
  */
 package io.airlift.discovery.server.testing;
 
+import com.facebook.airlift.discovery.client.Announcement;
+import com.facebook.airlift.discovery.client.DiscoveryAnnouncementClient;
+import com.facebook.airlift.discovery.client.DiscoveryLookupClient;
+import com.facebook.airlift.discovery.client.HttpDiscoveryAnnouncementClient;
+import com.facebook.airlift.discovery.client.HttpDiscoveryLookupClient;
+import com.facebook.airlift.discovery.client.ServiceDescriptors;
+import com.facebook.airlift.discovery.client.ServiceDescriptorsRepresentation;
+import com.facebook.airlift.http.client.HttpClient;
+import com.facebook.airlift.http.client.jetty.JettyHttpClient;
+import com.facebook.airlift.node.NodeInfo;
 import com.google.common.collect.ImmutableSet;
-import io.airlift.discovery.client.Announcement;
-import io.airlift.discovery.client.DiscoveryAnnouncementClient;
-import io.airlift.discovery.client.DiscoveryLookupClient;
-import io.airlift.discovery.client.HttpDiscoveryAnnouncementClient;
-import io.airlift.discovery.client.HttpDiscoveryLookupClient;
-import io.airlift.discovery.client.ServiceDescriptors;
-import io.airlift.discovery.client.ServiceDescriptorsRepresentation;
-import io.airlift.http.client.HttpClient;
-import io.airlift.http.client.jetty.JettyHttpClient;
-import io.airlift.node.NodeInfo;
 import org.testng.annotations.Test;
 
-import static io.airlift.discovery.client.ServiceAnnouncement.serviceAnnouncement;
-import static io.airlift.json.JsonCodec.jsonCodec;
+import static com.facebook.airlift.discovery.client.ServiceAnnouncement.serviceAnnouncement;
+import static com.facebook.airlift.json.JsonCodec.jsonCodec;
 import static org.testng.Assert.assertEquals;
 
 public class TestTestingDiscoveryServer

@@ -15,9 +15,10 @@
  */
 package io.airlift.discovery.store;
 
-import io.airlift.configuration.Config;
+import com.facebook.airlift.configuration.Config;
 
 import javax.validation.constraints.NotNull;
+
 import java.io.File;
 
 public class PersistentStoreConfig

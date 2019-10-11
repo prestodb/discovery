@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
 
 import java.util.Set;
 
-import static io.airlift.testing.Assertions.assertEqualsIgnoreOrder;
+import static com.facebook.airlift.testing.Assertions.assertEqualsIgnoreOrder;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 

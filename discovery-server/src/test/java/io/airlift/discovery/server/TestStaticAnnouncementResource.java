@@ -15,10 +15,10 @@
  */
 package io.airlift.discovery.server;
 
+import com.facebook.airlift.jaxrs.testing.MockUriInfo;
+import com.facebook.airlift.node.NodeInfo;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import io.airlift.jaxrs.testing.MockUriInfo;
-import io.airlift.node.NodeInfo;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

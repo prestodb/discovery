@@ -15,7 +15,7 @@
  */
 package io.airlift.discovery.server;
 
-import io.airlift.node.NodeInfo;
+import com.facebook.airlift.node.NodeInfo;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;

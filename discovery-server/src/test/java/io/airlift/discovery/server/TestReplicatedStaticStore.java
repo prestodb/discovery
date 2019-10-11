@@ -24,7 +24,7 @@ import io.airlift.discovery.store.RemoteStore;
 import io.airlift.discovery.store.StoreConfig;
 import org.joda.time.DateTime;
 
-import static io.airlift.json.JsonCodec.jsonCodec;
+import static com.facebook.airlift.json.JsonCodec.jsonCodec;
 
 public class TestReplicatedStaticStore
     extends TestStaticStore

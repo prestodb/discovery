@@ -15,18 +15,18 @@
  */
 package io.airlift.discovery.server;
 
+import com.facebook.airlift.json.JsonCodec;
 import com.google.common.base.Charsets;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.google.common.io.Resources;
-import io.airlift.json.JsonCodec;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.util.Map;
 
-import static io.airlift.testing.Assertions.assertNotEquals;
-import static io.airlift.testing.EquivalenceTester.equivalenceTester;
+import static com.facebook.airlift.testing.Assertions.assertNotEquals;
+import static com.facebook.airlift.testing.EquivalenceTester.equivalenceTester;
 import static org.testng.Assert.assertEquals;
 
 public class TestService

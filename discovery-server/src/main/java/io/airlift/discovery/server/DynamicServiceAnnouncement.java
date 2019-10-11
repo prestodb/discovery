@@ -21,6 +21,7 @@ import com.google.common.base.Function;
 import com.google.common.collect.ImmutableMap;
 
 import javax.validation.constraints.NotNull;
+
 import java.util.Map;
 
 public class DynamicServiceAnnouncement

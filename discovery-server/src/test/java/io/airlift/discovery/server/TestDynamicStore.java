@@ -26,10 +26,10 @@ import org.testng.annotations.Test;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
+import static com.facebook.airlift.testing.Assertions.assertEqualsIgnoreOrder;
 import static com.google.common.collect.Collections2.transform;
 import static com.google.common.collect.Iterables.concat;
 import static io.airlift.discovery.server.DynamicServiceAnnouncement.toServiceWith;
-import static io.airlift.testing.Assertions.assertEqualsIgnoreOrder;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 

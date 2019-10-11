@@ -13,20 +13,20 @@
  */
 package io.airlift.discovery.server;
 
+import com.facebook.airlift.configuration.AbstractConfigurationAwareModule;
+import com.facebook.airlift.discovery.client.ServiceSelector;
 import com.google.common.collect.ImmutableSet;
 import com.google.inject.Binder;
 import com.google.inject.Scopes;
-import io.airlift.configuration.AbstractConfigurationAwareModule;
-import io.airlift.discovery.client.ServiceSelector;
 import io.airlift.discovery.store.InMemoryStore;
 import io.airlift.discovery.store.ReplicatedStoreModule;
 
 import java.util.Set;
 
-import static io.airlift.configuration.ConfigBinder.configBinder;
-import static io.airlift.discovery.client.DiscoveryBinder.discoveryBinder;
-import static io.airlift.jaxrs.JaxrsBinder.jaxrsBinder;
-import static io.airlift.json.JsonCodecBinder.jsonCodecBinder;
+import static com.facebook.airlift.configuration.ConfigBinder.configBinder;
+import static com.facebook.airlift.discovery.client.DiscoveryBinder.discoveryBinder;
+import static com.facebook.airlift.jaxrs.JaxrsBinder.jaxrsBinder;
+import static com.facebook.airlift.json.JsonCodecBinder.jsonCodecBinder;
 
 public class EmbeddedDiscoveryModule
         extends AbstractConfigurationAwareModule

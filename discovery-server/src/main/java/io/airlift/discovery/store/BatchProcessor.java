@@ -15,8 +15,8 @@
  */
 package io.airlift.discovery.store;
 
+import com.facebook.airlift.log.Logger;
 import com.google.common.base.Preconditions;
-import io.airlift.log.Logger;
 import org.weakref.jmx.Managed;
 
 import javax.annotation.PostConstruct;
@@ -32,7 +32,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicLong;
 
-import static io.airlift.concurrent.Threads.threadsNamed;
+import static com.facebook.airlift.concurrent.Threads.threadsNamed;
 import static java.util.concurrent.Executors.newSingleThreadExecutor;
 
 public class BatchProcessor<T>

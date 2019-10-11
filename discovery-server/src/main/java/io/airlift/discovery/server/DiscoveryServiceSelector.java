@@ -13,12 +13,12 @@
  */
 package io.airlift.discovery.server;
 
+import com.facebook.airlift.discovery.client.ServiceDescriptor;
+import com.facebook.airlift.discovery.client.ServiceInventory;
+import com.facebook.airlift.discovery.client.ServiceSelector;
+import com.facebook.airlift.node.NodeInfo;
 import com.google.common.collect.ImmutableList;
 import com.google.common.util.concurrent.ListenableFuture;
-import io.airlift.discovery.client.ServiceDescriptor;
-import io.airlift.discovery.client.ServiceInventory;
-import io.airlift.discovery.client.ServiceSelector;
-import io.airlift.node.NodeInfo;
 
 import javax.inject.Inject;
 

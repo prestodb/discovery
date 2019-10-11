@@ -15,8 +15,8 @@
  */
 package io.airlift.discovery.server;
 
+import com.facebook.airlift.node.NodeInfo;
 import com.google.inject.Inject;
-import io.airlift.node.NodeInfo;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
