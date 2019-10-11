@@ -15,7 +15,7 @@
  */
 package io.airlift.discovery.server;
 
-import io.airlift.configuration.Config;
+import com.facebook.airlift.configuration.Config;
 import io.airlift.units.Duration;
 
 import javax.validation.constraints.NotNull;

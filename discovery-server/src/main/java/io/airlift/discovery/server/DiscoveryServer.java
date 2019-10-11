@@ -15,19 +15,19 @@
  */
 package io.airlift.discovery.server;
 
+import com.facebook.airlift.bootstrap.Bootstrap;
+import com.facebook.airlift.discovery.client.Announcer;
+import com.facebook.airlift.discovery.client.DiscoveryModule;
+import com.facebook.airlift.event.client.HttpEventModule;
+import com.facebook.airlift.http.server.HttpServerModule;
+import com.facebook.airlift.jaxrs.JaxrsModule;
+import com.facebook.airlift.jmx.JmxModule;
+import com.facebook.airlift.jmx.http.rpc.JmxHttpRpcModule;
+import com.facebook.airlift.json.JsonModule;
+import com.facebook.airlift.log.Logger;
+import com.facebook.airlift.node.NodeModule;
+import com.facebook.airlift.tracetoken.TraceTokenModule;
 import com.google.inject.Injector;
-import io.airlift.bootstrap.Bootstrap;
-import io.airlift.discovery.client.Announcer;
-import io.airlift.discovery.client.DiscoveryModule;
-import io.airlift.event.client.HttpEventModule;
-import io.airlift.http.server.HttpServerModule;
-import io.airlift.jaxrs.JaxrsModule;
-import io.airlift.jmx.JmxModule;
-import io.airlift.jmx.http.rpc.JmxHttpRpcModule;
-import io.airlift.json.JsonModule;
-import io.airlift.log.Logger;
-import io.airlift.node.NodeModule;
-import io.airlift.tracetoken.TraceTokenModule;
 import org.weakref.jmx.guice.MBeanModule;
 
 public final class DiscoveryServer

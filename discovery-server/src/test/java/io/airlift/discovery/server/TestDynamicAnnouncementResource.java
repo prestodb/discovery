@@ -15,11 +15,11 @@
  */
 package io.airlift.discovery.server;
 
+import com.facebook.airlift.jaxrs.testing.MockUriInfo;
+import com.facebook.airlift.node.NodeInfo;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import io.airlift.discovery.store.RealTimeSupplier;
-import io.airlift.jaxrs.testing.MockUriInfo;
-import io.airlift.node.NodeInfo;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -27,9 +27,9 @@ import javax.ws.rs.core.Response;
 
 import java.net.URI;
 
+import static com.facebook.airlift.testing.Assertions.assertEqualsIgnoreOrder;
 import static com.google.common.collect.Iterables.transform;
 import static io.airlift.discovery.server.DynamicServiceAnnouncement.toServiceWith;
-import static io.airlift.testing.Assertions.assertEqualsIgnoreOrder;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;

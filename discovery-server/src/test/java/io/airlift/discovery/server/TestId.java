@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
 
 import java.util.Map;
 
-import static io.airlift.json.JsonCodec.jsonCodec;
+import static com.facebook.airlift.json.JsonCodec.jsonCodec;
 import static org.testng.Assert.assertEquals;
 
 

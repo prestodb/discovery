@@ -20,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.Preconditions;
 
 import javax.annotation.concurrent.Immutable;
+
 import java.util.Arrays;
 
 @Immutable

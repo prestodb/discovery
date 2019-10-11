@@ -15,6 +15,9 @@
  */
 package io.airlift.discovery.store;
 
+import com.facebook.airlift.discovery.client.ServiceSelector;
+import com.facebook.airlift.http.client.HttpClient;
+import com.facebook.airlift.node.NodeInfo;
 import com.google.common.base.Supplier;
 import com.google.inject.Binder;
 import com.google.inject.Injector;
@@ -23,9 +26,6 @@ import com.google.inject.Module;
 import com.google.inject.Provider;
 import com.google.inject.Scopes;
 import com.google.inject.TypeLiteral;
-import io.airlift.discovery.client.ServiceSelector;
-import io.airlift.http.client.HttpClient;
-import io.airlift.node.NodeInfo;
 import org.joda.time.DateTime;
 import org.weakref.jmx.MBeanExporter;
 
@@ -36,11 +36,11 @@ import javax.inject.Inject;
 
 import java.lang.annotation.Annotation;
 
+import static com.facebook.airlift.configuration.ConfigBinder.configBinder;
+import static com.facebook.airlift.http.client.HttpClientBinder.httpClientBinder;
+import static com.facebook.airlift.jaxrs.JaxrsBinder.jaxrsBinder;
 import static com.google.inject.multibindings.MapBinder.newMapBinder;
 import static com.google.inject.name.Names.named;
-import static io.airlift.configuration.ConfigBinder.configBinder;
-import static io.airlift.http.client.HttpClientBinder.httpClientBinder;
-import static io.airlift.jaxrs.JaxrsBinder.jaxrsBinder;
 import static org.weakref.jmx.ObjectNames.generatedNameOf;
 import static org.weakref.jmx.guice.ExportBinder.newExporter;
 

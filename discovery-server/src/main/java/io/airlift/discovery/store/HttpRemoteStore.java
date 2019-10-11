@@ -15,19 +15,19 @@
  */
 package io.airlift.discovery.store;
 
+import com.facebook.airlift.discovery.client.ServiceDescriptor;
+import com.facebook.airlift.discovery.client.ServiceSelector;
+import com.facebook.airlift.http.client.BodyGenerator;
+import com.facebook.airlift.http.client.HttpClient;
+import com.facebook.airlift.http.client.Request;
+import com.facebook.airlift.log.Logger;
+import com.facebook.airlift.node.NodeInfo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.smile.SmileFactory;
 import com.google.common.base.Function;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Predicate;
 import com.google.common.collect.ImmutableSet;
-import io.airlift.discovery.client.ServiceDescriptor;
-import io.airlift.discovery.client.ServiceSelector;
-import io.airlift.http.client.BodyGenerator;
-import io.airlift.http.client.HttpClient;
-import io.airlift.http.client.Request;
-import io.airlift.log.Logger;
-import io.airlift.node.NodeInfo;
 import io.airlift.units.Duration;
 import org.weakref.jmx.MBeanExporter;
 import org.weakref.jmx.Managed;
@@ -52,6 +52,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
+import static com.facebook.airlift.concurrent.Threads.daemonThreadsNamed;
+import static com.facebook.airlift.http.client.StatusResponseHandler.createStatusResponseHandler;
 import static com.google.common.base.Predicates.and;
 import static com.google.common.base.Predicates.compose;
 import static com.google.common.base.Predicates.equalTo;
@@ -60,8 +62,6 @@ import static com.google.common.base.Predicates.not;
 import static com.google.common.collect.Iterables.filter;
 import static com.google.common.collect.Iterables.transform;
 import static com.google.inject.name.Names.named;
-import static io.airlift.concurrent.Threads.daemonThreadsNamed;
-import static io.airlift.http.client.StatusResponseHandler.createStatusResponseHandler;
 import static java.util.concurrent.Executors.newSingleThreadScheduledExecutor;
 import static org.weakref.jmx.ObjectNames.generatedNameOf;
 

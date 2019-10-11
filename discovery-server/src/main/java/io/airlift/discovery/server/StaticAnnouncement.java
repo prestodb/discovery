@@ -20,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.collect.ImmutableMap;
 
 import javax.validation.constraints.NotNull;
+
 import java.util.Map;
 
 public class StaticAnnouncement
