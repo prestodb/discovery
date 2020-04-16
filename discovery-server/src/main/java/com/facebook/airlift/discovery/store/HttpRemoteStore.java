@@ -241,7 +241,12 @@ public class HttpRemoteStore
             this.httpClient = httpClient;
 
             // TODO: build URI from resource class
-            uri = URI.create(descriptor.getProperties().get("http") + "/v1/store/" + name);
+            if (descriptor.getProperties().get("https") != null) {
+                uri = URI.create(descriptor.getProperties().get("https") + "/v1/store/" + name);
+            }
+            else {
+                uri = URI.create(descriptor.getProperties().get("http") + "/v1/store/" + name);
+            }
         }
 
         @Override

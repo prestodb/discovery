@@ -129,7 +129,7 @@ public class Replicator
                 continue;
             }
 
-            String uri = descriptor.getProperties().get("http");
+            String uri = descriptor.getProperties().get("https") != null ? descriptor.getProperties().get("https") : descriptor.getProperties().get("http");
             if (uri == null) {
                 log.error("service descriptor for node %s is missing http uri", descriptor.getNodeId());
                 continue;
