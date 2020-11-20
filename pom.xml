@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.facebook.airlift</groupId>
         <artifactId>airbase</artifactId>
-        <version>95</version>
+        <version>100</version>
     </parent>
 
     <groupId>com.facebook.airlift.discovery</groupId>
@@ -54,7 +54,7 @@
     <properties>
         <air.check.skip-extended>true</air.check.skip-extended>
 
-        <dep.airlift.version>0.192</dep.airlift.version>
+        <dep.airlift.version>0.198</dep.airlift.version>
         <dep.packaging.version>${dep.airlift.version}</dep.packaging.version>
         <dep.leveldb.version>0.10</dep.leveldb.version>
     </properties>
