@@ -105,7 +105,6 @@ public class TestDiscoveryServer
                 });
 
         Injector serverInjector = bootstrap
-                .strictConfig()
                 .doNotInitializeLogging()
                 .setRequiredConfigurationProperties(serverProperties)
                 .initialize();
@@ -137,7 +136,6 @@ public class TestDiscoveryServer
                 new DiscoveryModule());
 
         Injector announcerInjector = bootstrap
-                .strictConfig()
                 .doNotInitializeLogging()
                 .setRequiredConfigurationProperties(announcerProperties)
                 .initialize();
@@ -235,7 +233,6 @@ public class TestDiscoveryServer
                 });
 
         Injector clientInjector = bootstrap
-                .strictConfig()
                 .doNotInitializeLogging()
                 .setRequiredConfigurationProperties(clientProperties)
                 .initialize();
